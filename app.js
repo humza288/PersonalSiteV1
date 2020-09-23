@@ -35,7 +35,7 @@ app.controller("mainCtrl", [ "$scope", "$http", "$window", "$location", function
                 ] 
             },
             headers: {
-            'Authorization': 'Basic YjhiZmNhZGFjZjAzNWZiMjg5MDQ2OGEzNDQ4ZDE0MGE6NzVlZmVlMDJkNGRjNzlmNTJmNWJmMDQ2YTE0Y2E4MTQ=',
+            'Authorization': 'Basic ',
             'Content-Type' : 'Application/JSON'
             }
 
