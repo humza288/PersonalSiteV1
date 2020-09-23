@@ -19,10 +19,12 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="./scripts/smoothScroll.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script src="./app.js"></script>
 
   </head>
 
-  <body class="body">
+  <body class="body" ng-app="portfolioSite" ng-controller="mainCtrl">
 
     <!--NAVIGATION BAR-->
 
@@ -242,7 +244,7 @@
             <div class="row info-rows">
               <div class="col-sm content contact-form">
                 <p class="lead ">Contact Me</p>
-                <form action="" method="post">
+                <form >
                   <div class="form-group">
                     <label for="usr">Email:</label>
                     <input type="text" class="form-control" id="usr">
@@ -255,7 +257,7 @@
                     <label for="comment">Message:</label>
                     <textarea class="form-control" rows="5" id="comment"></textarea>
                   </div>
-                <input type="submit" name='mobile 'class="btn main-submit"></input>
+                <input type="submit" name='mobile 'class="btn main-submit" ng-click="submitContact()"></input>
               </div>
             </div>
           </div>
