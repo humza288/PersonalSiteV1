@@ -20,6 +20,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
       <script src="./scripts/smoothScroll.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
       <script src="./app.js"></script>
 
   </head>
@@ -236,28 +237,30 @@
           </div>
         </div>
       </div>
+
+      
       
       <div class="section s4 contact" id="contact" data-anchor="contact-anchor"> 
-        <h1>Get in touch...</h1>
-        <div class="wrapper">
+        <h1 ng-hide="submitted"> Get in touch...</h1>
+        <h1 ng-hide="!submitted" class="contactText"> Thank you...</h1>
+        <p ng-hide="!submitted" class="submitText"> Thank you for contacting me! I look forward to meeting you.</p>
+        <div class="wrapper" ng-hide="submitted">
           <div class="container">
             <div class="row info-rows">
               <div class="col-sm content contact-form">
                 <p class="lead ">Contact Me</p>
-                <form >
+                <form name="form" method="POST">
                   <div class="form-group">
-                    <label for="usr">Email:</label>
-                    <input type="text" class="form-control" id="usr">
+                    <label for="usr" class="purple">Email:</label>
+                    <input type="email" name="email" class="form-control" id="usr" ng-model="email" placeholder="Enter email.." required>
+                    <p class="red-text" ng-if="form.email.$error.required && form.$dirty">Email is required.</p>
+                    <p class="red-text" ng-show="!form.email.$valid && !form.email.$error.required">Email is invalid.</p>
+                 
+                    <label for="comment" class="purple">Message:</label>
+                    <textarea name="message" class="form-control"  rows="5" id="comment" ng-model="message" placeholder="Enter message.." required></textarea>
+                    <p class="red-text" ng-if="form.message.$error.required && form.$dirty">Message is required.</p>
                   </div>
-                  <div class="form-group">
-                    <label for="usr">Number:</label>
-                    <input type="text" class="form-control" id="usr">
-                  </div>
-                  <div class="form-group">
-                    <label for="comment">Message:</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
-                  </div>
-                <input type="submit" name='mobile 'class="btn main-submit" ng-click="submitContact()"></input>
+                <input type="submit" name='mobile 'class="btn main-submit" ng-disabled=!form.$valid ng-click="submitContact()"></input>
               </div>
             </div>
           </div>

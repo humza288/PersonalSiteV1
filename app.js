@@ -1,9 +1,47 @@
-var app = angular.module("portfolioSite", []); 
+var app = angular.module("portfolioSite", ["ngRoute"]); 
 
-app.controller("mainCtrl", function($scope) {
-    $scope.submitContact = function () {
-        console.log("chod man")
-    }
+app.config(function ($httpProvider) {
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 });
 
-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
+app.controller("mainCtrl", [ "$scope", "$http", "$window", "$location", function($scope, $http, $window, $loacation) {
+
+    $scope.submitted = false
+    $scope.email = ""
+    $scope.number = ""
+    $scope.message = ""
+
+    $scope.submitContact = function () {
+        $http({
+            method: 'POST', 
+            url: 'https://api.mailjet.com/v3.1/send', 
+            data: {
+                "Messages":[
+                    {
+                        "From": {
+                                "Email": "munirh@uci.edu",
+                                "Name": "Humza"
+                        },
+                        "To": [
+                            {
+                                "Email": "munirh@uci.edu",
+                                "Name": "Humza"
+                            }
+                        ],
+                        "Subject": "Portfolio Site - Contact Request",
+                        "TextPart": "Portfolio Site - Contact Request",
+                        "HTMLPart": "<h1>Contact Request</h1><br><h2> Email:" + String($scope.email) + "</h2><br><h3>Message:</h3><p>" + String($scope.message) + "</p>"
+                    } 
+                ] 
+            },
+            headers: {
+            'Authorization': 'Basic YjhiZmNhZGFjZjAzNWZiMjg5MDQ2OGEzNDQ4ZDE0MGE6NzVlZmVlMDJkNGRjNzlmNTJmNWJmMDQ2YTE0Y2E4MTQ=',
+            'Content-Type' : 'Application/JSON'
+            }
+
+        });
+
+        $scope.submitted = true
+    
+    }
+}]);
