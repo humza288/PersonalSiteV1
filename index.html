@@ -1,0 +1,390 @@
+<html>
+  <head>
+
+      <title>Humza Munir | Portfolio</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./styles/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" rel="stylesheet">
+
+  </head>
+
+  <body class="body">
+
+    <!--NAVIGATION BAR-->
+
+    <nav id="navbar" class="navbar navbar-expand-sm  navbar-dark">
+      <a class="navbar-brand" id="for-desktop" href="#home-anchor">HM</a>
+      <a class="navbar-brand" id="for-mobile" href="#home">HM</a>
+       <!-- Collapse button -->
+      <button class="navbar-toggler first-button" onclick="animateBurger()" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+        aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+        <div id="burger" class="animated-icon1"><span id="line-one"></span>
+          <span id="line-two"></span><span id="line-three"></span></div>
+      </button>
+
+
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" id="for-mobile" onclick="removeTop()" href="#about" >About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="for-mobile" onclick="removeTop()" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="for-mobile" onclick="removeTop()" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="for-desktop"  href="#about-anchor" >About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="for-desktop"  href="#projects-anchor">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="for-desktop" href="#contact-anchor">Contact</a>
+          </li>      
+        </ul>
+      </div>
+    </nav>
+
+
+    <div id="fullPage">
+     
+      <div class="section s1" id="home" data-anchor="home-anchor"> 
+        <!--MAIN BANNER-->
+        <div class="container">
+          <div class="jumbotron">
+              <div class="container">
+                  <div class="row">
+                      <div class="column info ">
+                        <div class="typewriter">
+                          <p>Hi, I'm Humza.</p>
+                        </div>
+                          <p class="lead">
+                              I am a student at University of California, Irvine
+                              pursuing a Bachelor's Degree in Computer Science. 
+                          </p>
+                          <a href="#contact-anchor" class="" style="text-decoration: none;">
+                            <button type="button" class="btn btn-light for-desktop">Get in Touch</button>
+                          </a>
+                          <a href="https://docs.google.com/document/d/1agnl-3-RmlTlGe2BXKE3tLZMdfBm4iiI-AFq5eKGiVM/export?format=pdf"><button type="button" 
+                            class="btn btn-light media-button for-mobile">Resume</button></a>
+                          <button type="button" class="btn btn-dark media-button" 
+                          data-toggle="modal" data-target="#exampleModalCenter">Media</button>
+                         
+
+                      </div>
+                      <div class="column profile">
+                          <img src="./assets/profile.jpg" class="rounded-circle">
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="section s2" id="about" data-anchor="about-anchor"> 
+        <!--MAIN INFORMATION-->
+        <h1>Who am I?</h1>
+        <div class="container">
+          <div class="wrapper">
+            <div class="row info-rows">
+              <div class="col-sm content content-two">
+                <p class="lead">About Me</p>
+                <div class="about-content">
+                  <p>
+                    Most users see a computer at the front and use the graphical user interfaces. The first time I used a computer, it intrigued me to know how these interfaces work, the theory behind computers and the methodology of how they work. Today, I am a rising senior in pursuit of my Computer Science degree.
+                    With many projects under my belt I am keen on furthering my knowlege and diving into the professional world.
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm content content-two">
+                <p class="lead">Education</p>
+                <div class="education-content">
+                  <p>
+                    <i><b class="purple">B.S. in Computer Science</b></i><br>University of California, Irvine<br>
+                      <i>Expected Graduation March 2021</i>
+                  </p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <div class="section s3" id="projects" data-anchor="projects-anchor">
+        <h1>Things i've done...</h1>
+        <div class="wrapper">
+          <div class="container">
+            <div class="row info-rows">
+                <div class="col-sm content">
+                  <p class="lead">Skills</p>
+                  <div class='skills-content'>
+                    <dl class="row">
+                      <dt class="col-sm-3 purple">Programming<br>Languages</dt>
+                      <dd class="col-sm-9">Python, C++, Swift, Assembly,<br>HTML, CSS, & JavaScript.</dd>
+                      <dt class="col-sm-3 purple">Tools Frameworks</dt>
+                      <dd class="col-sm-9"><p>React, Django, Bootstrap,<br>Git/Gitbash, & Qt.</p></dd>
+                      <dt class="col-sm-3 purple">Languages</dt>
+                      <dd class="col-sm-9"><p>Hindi/Urdu (Spoken Proficiency), 
+                                          <br> English (Native Proficiency).</p>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="col-sm content projects-part">
+                    <p class="lead">Projects</p>
+                    <div class="project-content">
+                      <div id="accordion">
+                        <div>
+                          <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                              <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Shredr
+                              </button>
+                            </h5>
+                          </div>
+                      
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                              <p>
+                                Fitness application designed to help users attain a desired weight goal in a specified time interval, by tracking users activity, logging calories, and providing personalized restaurant and workout results based upon user ratings and target caloric intake. Used a collaborative filtering approach to implement a recommendation engine. Utilized React Native, Google Firebase, as well as various RESTful APIs.<br>
+                              </p>
+                              <a href="https://github.com/humza288/Shredr-Public">
+                                <button type="button" class="btn btn-github">View On Github</button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                              <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ReportCard
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                              <p>
+                                iOS application built with Swift and Swift UI to help students keep track of grades and overall GPA across multiple classes and terms as well as to suggest additional needed percentages to achieve grade targets. Utilizing a firebase backend to allow users to preserve data across multiple devices with google sign-in. 
+                              </p>
+                              <a href="https://github.com/humza288/ReportCard">
+                                <button type="button" class="btn btn-github">View On Github</button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                              <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Minesweeper AI
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                              <p>
+                                AI algorithm written in python to play minesweeper in in-class competition. Implemented backtracking search and constraint satisfaction to solve Minesweeper game across various different difficulties and board sizes. Achieved performance in top 25% during course competition.
+                              </p>
+                              <a href="https://github.com/humza288/CS171_Project">
+                                <button type="button" class="btn btn-github">View On Github</button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                              <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Portfolio Site
+                              </button>
+                            </h5>
+                          </div>
+                          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                              <p>
+                                Full-stack personal website which serves as a portfolio for all present/future projects and allows anyone to easily get in touch. Built with HTML, CSS, Javascript, JQuery, BootStrap, and Django.
+                              </p>
+                              <a href="https://github.com/humza288/PersonalSite-public">
+                                <button type="button" class="btn btn-github">View On Github</button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section s4 contact" id="contact" data-anchor="contact-anchor"> 
+        <h1>Get in touch...</h1>
+        <div class="wrapper">
+          <div class="container">
+            <div class="row info-rows">
+              <div class="col-sm content contact-form">
+                <p class="lead ">Contact Me</p>
+                <form action="" method="post">
+                  <div class="form-group">
+                    <label for="usr">Email:</label>
+                    <input type="text" class="form-control" id="usr">
+                  </div>
+                  <div class="form-group">
+                    <label for="usr">Number:</label>
+                    <input type="text" class="form-control" id="usr">
+                  </div>
+                  <div class="form-group">
+                    <label for="comment">Message:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                <input type="submit" name='mobile 'class="btn main-submit"></input>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!--MODAL FOR MEDIA LINKS-->
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Links</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul style="list-style-type: none;">
+                <li><i class="fas fa-envelope-square"></i> -  munirh@uci.edu</li>
+                <li><i class="fab fa-linkedin"></i> - <a href="https://www.linkedin.com/in/humzamunir">linkedin.com/in/humzamunir</li></a>
+                <li><i class="fab fa-github"></i> - <a href="https://www.github.com/humza288">github.com/humza288</a></li>
+                <li><i class="fas fa-phone-square"></i> - 1-(949)-899-7403</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="media">
+      <div class="lineOne"></div>
+      <div class="lineTwo"></div>
+      <div class="lineThree"></div>
+    </div>
+
+    <div class="icons">
+      <a class="icon-one" href="https://linkedin.com/in/humzamunir">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      
+      <a class="icon-two" href="https://github.com/humza288">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      
+      <a class="icon-three" href="mailto:humza288@gmail.com">
+        <i class="fa fa-envelope-o fa-2x"></i>
+      </a>
+    </div>
+
+    <div class="area" >
+      <ul class="circles">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+      </ul>
+    </div >
+
+
+    <div class="footer">
+        <p><i>© Humza Munir, All Rights Reserved</i></p>
+        <div class="hidden">
+          <i><p>Last Update: 3/26/2020 <br>
+            Created With:<br> Bootstrap, Django, Javascript, HTML, & CSS</p></i>
+          <div class="media-icons">
+          
+            <a href="https://linkedin.com/in/humzamunir">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            
+            <a href="https://github.com/humza288">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            
+            <a href="mailto:humza288@gmail.com">
+              <i class="fa fa-envelope-o fa-2x"></i>
+            </a>
+          </div>
+        </div>
+    </div>
+    
+  
+      <!--SCRIPTS-->  
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>   
+      <script src="./scripts/fullPage.js"></script>
+      <script src="https://kit.fontawesome.com/395a164355.js" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="./scripts/animateNavbar.js"></script>
+      <script src="./scripts/animateCards.js"></script>
+      <script src="./scripts/animateBurger.js"></script>
+      <script src="./scripts/smoothScroll.js"></script>
+
+
+      <script>
+
+        var atTop = true
+        var open = false
+        
+        new fullpage('#fullpage', {
+        anchors: ['home-anchor', 'about-anchor', 'projects-anchor', 'contact-anchor']
+      });
+
+      //methods
+      fullpage_api.setAllowScrolling(true);
+
+
+      function animateBurger() {
+         burger = document.getElementById("burger");
+         burger.classList.toggle("open");
+         if (atTop) {
+          document.getElementById("navbar").style = "background-color: #ffffff !important";
+          document.getElementById("navbar").style.boxShadow = "0 4px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
+          document.getElementById("navbar").classList.remove("navbar-dark");
+          document.getElementById("navbar").classList.add("navbar-light");
+          document.getElementById("line-one").style.backgroundColor = "black";
+          document.getElementById("line-two").style.backgroundColor = "black";
+          document.getElementById("line-three").style.backgroundColor = "black";
+          open = !open
+         }
+      }
+
+
+    </script>
+    
+    </body>
+
+</html>
+
