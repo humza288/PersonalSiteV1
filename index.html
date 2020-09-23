@@ -18,9 +18,6 @@
       <script src="https://kit.fontawesome.com/395a164355.js" crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="./scripts/animateNavbar.js"></script>
-      <script src="./scripts/animateCards.js"></script>
-      <script src="./scripts/animateBurger.js"></script>
       <script src="./scripts/smoothScroll.js"></script>
 
   </head>
@@ -351,39 +348,9 @@
         </div>
     </div>
 
-
-      <script>
-
-        var atTop = true
-        var open = false
-        
-        new fullpage('#fullpage', {
-        anchors: ['home-anchor', 'about-anchor', 'projects-anchor', 'contact-anchor']
-      });
-
-      //methods
-      fullpage_api.setAllowScrolling(true);
-
-
-      function animateBurger() {
-         burger = document.getElementById("burger");
-         burger.classList.toggle("open");
-         if (atTop) {
-          document.getElementById("navbar").style = "background-color: #ffffff !important";
-          document.getElementById("navbar").style.boxShadow = "0 4px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)";
-          document.getElementById("navbar").classList.remove("navbar-dark");
-          document.getElementById("navbar").classList.add("navbar-light");
-          document.getElementById("line-one").style.backgroundColor = "black";
-          document.getElementById("line-two").style.backgroundColor = "black";
-          document.getElementById("line-three").style.backgroundColor = "black";
-          open = !open
-         }
-      }
-
-
-    </script>
-    
+      <script src="./scripts/animateNavbar.js"></script>
+      <script src="./scripts/animateCards.js"></script>
+      <script src="./scripts/animateBurger.js"></script>
     </body>
-
 </html>
 
